@@ -1,0 +1,360 @@
+:root{
+    --primary-color:#70d6af;
+    /* --secondary:rgb(168, 94, 94); */
+    --text-color: #264653;
+    --background-color: #edf1f1;
+}
+
+/* li:before { content: '\1F68D'; margin-left: -20px; margin-right: 10px; }  */
+
+
+body{
+  background-color: var(--background-color);
+  color:black;
+}
+
+.mainContent{
+    
+    margin:40px auto;
+    max-width:750px;
+    line-height:1.6;
+    font-size:18px;
+    padding:0 10px;
+    
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+    
+h1,h2,h3, h4, h5{
+    line-height:1.2;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    /* color: var(--text-color); */
+    margin-bottom: 0px;
+    
+}
+
+.headerThree{
+    /* line-height:1.2; */
+    font-family: 'Raleway', sans-serif;
+    /* display: flex; */
+    /* color: var(--text-color); */
+    /* margin-bottom: 0px; */
+    /* font-size: larger; */
+}
+
+.paragraphStyle{
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+h3{
+  color: #333333;
+}
+
+h2{
+  margin-top: 30px;
+}
+
+p, ul{
+    list-style-type: none;
+    list-style: none;
+    padding-left: 0;
+    font-family: 'Arial', sans-serif;
+
+    
+}
+
+
+
+    
+
+.h1{
+    text-align: center;
+}
+
+.h2{
+    text-align: left;
+}
+
+#state{
+    display: flex;
+    flex-direction: row;
+}
+
+#reminderLength{
+    font-weight: bold;
+    font-size: larger;
+    margin: 3px;
+}
+
+
+.button {
+    font-weight: bold;
+    /* display: flex; */
+    justify-content: center;
+
+    margin: 0px;
+    margin-left: 5px;
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: var(--primary-color)}
+
+.button:active {
+    background-color: var(--primary-color);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 40%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.box {
+    /* float: inline-start; */
+    height: 40px;
+    width: 40px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    clear: both;
+  }
+  
+  .red {
+    background-color: red;
+  }
+
+  .textField {
+    font-size: large;
+    font-weight: bold;
+    width: 20%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 5px solid #999;
+    border-radius: 15px;
+    box-sizing: border-box;
+    min-width: 140px;
+  }
+
+
+  li {
+    cursor: pointer;
+  }
+
+  .bigList{
+    border: 5px solid #999;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 15px;
+    font-weight: bold;
+    color: gray;
+    background-color: white;
+
+    max-height: 800px;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
+  }
+
+  .collapse{
+    /* collapsable */
+    transition: max-height 0.4s ease-in;
+    max-height: 0px;
+
+  }
+
+  li:hover {
+    /* background-color: lightgray; */
+    color: black;
+    font-size: larger;
+  }
+
+  ul li.selected, ul li.selected:hover{
+    font-weight: bold;
+    font-size: larger;
+    /* text-shadow: 2px 2px 8px lightgray; */
+    color: black;
+    background-color: var(--primary-color);
+    
+}
+
+li{
+  border-collapse: separate;
+  border-radius: 15px;
+  padding: 5px;
+  padding-left: 11px;
+  background-color: white;
+
+  border-spacing: 10px;
+}
+
+  .fading {
+
+    animation-duration: 4s;
+    animation-name: fading;
+}
+
+.focused{
+  text-shadow: 2px 2px var(--primary-color);
+}
+
+
+@keyframes fading {
+    from {
+        color: var(--primary-color);
+    }
+    to {
+        color: black;
+    }
+}
+
+
+.fadeOut{
+  animation: fadeOut ease 0.5s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+.hidden{
+  display:none;
+}
+
+
+
+/* Tooltips for adding easter eggs :) */
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  /* display: inline-block; */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius:8px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+/* table css */
+
+table.tftable {
+  font-size:12px;
+  color:black;
+  width:100%;
+
+  
+  border-width: 4px;
+  border-color: lightgray;
+  border-collapse: separate;
+  border-radius: 15px;
+
+  font-family: 'Arial', sans-serif;
+
+
+  /* padding: 40px; */
+  border-spacing: 8px;
+}
+table.tftable th {
+  font-size: x-large;
+  background-color:var(--background-color);
+  
+  padding: 8px;
+  /* border-width: 4px;
+  border-style: solid;
+  /* border-color: lightgray; */
+  /* border-radius: 15px;  */
+  text-align:left;
+  /* background-color:red; */
+
+  padding: 10px;
+}
+table.tftable tr {
+  background-color:white;
+  /* font-size: larger; */
+}
+table.tftable td {
+  font-size:medium;
+  border-width: 4px;
+  padding: 10px;
+  border-style: solid;
+  border-color: lightgray;
+  border-radius: 15px;
+
+  font-size: large;
+}

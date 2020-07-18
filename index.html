@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
+
+
+<div class="mainContent">
+    <h1>Bus departue reminder 🚏🚍</h1>
+
+    <p class="tooltip">Keeping you updated no matter the circumstances <span class="tooltiptext">Everything needs a tagline!</span></p>
+
+
+
+    <h2>About</h2>
+
+    <p>A simple site that continiuosly updates you in a set interval when your bus is leaving.
+        It can also say it out loud so you can always stay updated (even while the tab isn't open).
+        It uses the <a href="https://developer.entur.org/pages-real-time-intro">EnTur API</a> 
+        that is available anywhere in Norway to get accurate and current updates on bus locations.
+        If available the arrival time will be the estimated using realtime data.</p>
+
+
+    <h2>Your bus station is&nbsp;<div id="stationName" class="focused"></div></h2>
+
+    <p>Set a new station by writing in a &nbsp;<input id="stationLocation" class="textField" placeholder="Location"></p> 
+    
+
+    <ul id="stationList" class="bigList">
+        <li>Start by searching for a station</li>
+    </ul>
+
+    <div id="busListDiv" class="hidden">
+
+        <h2>What busses do you take?</h2>
+
+        <p>Select from the list the busses you take</p>
+
+        <ul id="busList" class="bigList">
+            <!-- <li>No station chosen</li> -->
+        </ul>
+
+    </div>
+
+    <div id="departuresList" class="hidden">
+
+        <h2>Departues</h2> <br>
+
+        <div id="departuresTable"> </div>
+
+    </div>
+
+   
+    <h2>Settings</h2> 
+
+
+    <!-- <p>Adjust the paramaters to your liking with these settings:</p> -->
+
+    <!-- <br> -->
+        <h3> </h3>
+
+        <p>The reminder of departures times is currently <button id="toggleButton" class="button">OFF</button></p>
+
+        <!-- <h3>Intervals</h3> -->
+        <p>
+            
+            
+            <br> Reminder every <b id="reminderLength"></b> minutes <br>
+            <input type="range" min="1" max="30" value="5" class="slider" id="reminderRange">
+    
+            <br><br>
+        <!-- <h3>Volume</h3> -->
+        <p>
+            Set the Text to speech volume &nbsp; <br>
+
+            <input style="margin-top: 15px;" type="range" min="1" max="100" value="50" class="slider" id="volumeRange">
+        </p>
+
+
+
+    </p>
+
+</div>
+
+
+<!-- big brain technique -->
+<br><br><br><br>
+
+<hr>    
+
+<div class="mainContent" >
+
+    <p style="text-align:left;" >
+        <i class="tooltip">Created by Jesper Hustad <span class="tooltiptext">Everyone knows: italics = fancy</span></i>
+        <span style="float:right;">
+            <i><a href="">GitHub</a> &nbsp;&nbsp; <a href="">LinkedIn</a></i>
+        </span>
+        
+    </p>
+</div>
+        
+
+
+
+    
+    
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+<script src="headers.js"></script>
+<script type="module" src="script.js"></script>
+
+
+</html>
